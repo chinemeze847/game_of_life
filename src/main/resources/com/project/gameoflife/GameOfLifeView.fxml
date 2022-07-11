@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="284.0" maxWidth="285.0" minHeight="200" minWidth="200" prefHeight="284.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.gameoflife.GameOfLifeController">
+    <bottom>
+
+       <HBox alignment="CENTER" cache="true" prefHeight="42.0" prefWidth="285.0" spacing="10" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#nextGen" text="Next" />
+            <Button mnemonicParsing="false" onMouseClicked="#stopAnimation" text="Stop" />
+            <Button lineSpacing="5.0" mnemonicParsing="false" onMouseClicked="#startAnimation" text="Start" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+
+   </bottom>
+   <left>
+      <VBox alignment="CENTER" prefHeight="225.0" prefWidth="60.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="BOTTOM" mnemonicParsing="false" onMouseClicked="#changeSeed" text="Seed" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="225.0" prefWidth="79.0" spacing="20" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Num Of Gens" />
+            <Label fx:id="counter" text="0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="18.0" prefWidth="285.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollBar prefHeight="14.0" prefWidth="288.0"
+                       max="1" value="0.25" fx:id="scroll" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
